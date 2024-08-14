@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listBooksFragment">
+
+    <fragment
+        android:id="@+id/listBooksFragment"
+        android:name="com.moraga.libros.ListBooksFragment"
+        android:label="fragment_list_books"
+        tools:layout="@layout/fragment_list_books" >
+        <action
+            android:id="@+id/action_listBooksFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+        <action
+            android:id="@+id/action_listBooksFragment_to_booksEditFragment"
+            app:destination="@id/booksEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.moraga.libros.BooksFragment"
+        android:label="fragment_books"
+        tools:layout="@layout/fragment_books" />
+    <fragment
+        android:id="@+id/booksEditFragment"
+        android:name="com.moraga.libros.BooksEditFragment"
+        android:label="fragment_books_edit"
+        tools:layout="@layout/fragment_books_edit" />
+</navigation>
